@@ -36,7 +36,8 @@
     <!--  x-data -->
     <div x-data="{
         open: false,
-        name: 'Kamikaze'
+        name: 'Kamikaze',
+        search: ''
     }">
         <!--  x-on -->
         <button
@@ -60,6 +61,13 @@
 
         <!--  x-effect -->
         <div x-effect="console.log(open)"></div>
+
+        <!--  x-model -->
+        <input x-model="search" type="text" class="border p-2 w-full mb-2 mt-2" placeholder="Search for something..."/>
+        <p>
+            <span class="font-bold">Searching for:</span>
+            <span x-text="search"></span>x
+        </p>
     </div>
 </main>
 </body>
