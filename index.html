@@ -10,9 +10,24 @@
 </head>
 <body>
 <main>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+    <h1 class="text-2xl text-center font-bold py-6">Alpine.js Playground</h1>
+
+    <div
+        class="p-4 m-4 bg-gray-100 rounded-lg shadow-md"
+        x-data="{
+        count: 0
+     }">
+        <button
+            class="inline-flex h-12 items-center justify-center rounded-md bg-neutral-950 px-6 font-medium text-neutral-50 shadow-lg shadow-neutral-500/20 transition active:scale-95"
+            x-on:click="count++"
+        >
+            Increment
+        </button>
+        <span
+            class="pl-2"
+            x-text="count">
+        </span>
+    </div>
 </main>
 </body>
 </html>
