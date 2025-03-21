@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alpine Playground - DarkMode</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+<main x-data :class="$store.darkMode.on && 'bg-gray-800 text-white'" class="container mx-auto max-w-lg space-y-4 mt-6 bg-gray-100 p-4 rounded">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+
+    <button
+            @click="$store.darkMode.toggle()"
+            :class="$store.darkMode.on && 'bg-gray-700'"
+            class="mt-4 bg-gray-300 inline-flex h-12 items-center justify-center rounded-md px-6 font-medium shadow-lg shadow-neutral-500/20 transition active:scale-95"
+    >
+        Toggle dark mode
+    </button>
+</main>
+
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('darkMode', {
+            on: false,
+
+            toggle() {
+                this.on = !this.on
+            }
+        })
+    })
+</script>
+
+</body>
+</html>
