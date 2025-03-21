@@ -109,7 +109,15 @@
         </div>
 
         <!--  x-html -->
-        <div x-html="(await axios.get('./partial.html')).data"></div>
+        <div x-html="(await axios.get('./partial.html')).data" class="mt-4"></div>
+
+        <!--  x-el -->
+        <button
+                @click="$el.innerHTML = 'Hello World'"
+                class=" mt-4 bg-neutral-950 inline-flex h-12 items-center justify-center rounded-md px-6 font-medium text-neutral-50 shadow-lg shadow-neutral-500/20 transition active:scale-95"
+        >
+            Replace text
+        </button>
     </div>
 </main>
 </body>
