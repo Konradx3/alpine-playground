@@ -164,6 +164,21 @@
             <input class="border wi-full p-2" x-mask:dynamic="$money($input, '.', ' ', 4 )"/>
         </div>
 
+        <!--  x-teleport -->
+        <div x-data="{openTp: false}">
+            <button
+                    @click="openTp = !openTp"
+                    class=" mt-4 bg-green-600 inline-flex h-12 items-center justify-center rounded-md px-6 font-medium text-neutral-50 shadow-lg shadow-neutral-500/20 transition active:scale-95"
+            >
+                Toggle Teleport
+            </button>
+            <template x-teleport="main">
+                <div x-show="openTp">
+                    Some content here...
+                </div>
+            </template>
+        </div>
+
     </div>
 </main>
 
