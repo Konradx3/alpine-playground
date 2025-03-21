@@ -132,7 +132,26 @@
             </button>
         </div>
 
+        <!--  $data -->
+        <button
+                @click="getLatestPost($data.posts)"
+                class=" mt-4 bg-neutral-950 inline-flex h-12 items-center justify-center rounded-md px-6 font-medium text-neutral-50 shadow-lg shadow-neutral-500/20 transition active:scale-95"
+        >
+            Get Latest Post
+        </button>
+
     </div>
 </main>
+
+<footer x-data class="mt-10 text-center">
+    <p>Copyright &copy; <span x-text="new Date().getFullYear()"></span></p>
+</footer>
+
+<script>
+    function getLatestPost(posts){
+        console.log(posts.slice(-1).pop())
+    }
+</script>
+
 </body>
 </html>
