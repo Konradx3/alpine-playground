@@ -118,6 +118,9 @@
         >
             Replace text
         </button>
+
+        <!--  x-init -->
+        <div x-init="$watch('posts', value => console.log(value))"></div>
     </div>
 </main>
 </body>
