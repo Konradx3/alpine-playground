@@ -66,8 +66,15 @@
         <input x-model="search" type="text" class="border p-2 w-full mb-2 mt-2" placeholder="Search for something..."/>
         <p>
             <span class="font-bold">Searching for:</span>
-            <span x-text="search"></span>x
+            <span x-text="search"></span>
         </p>
+
+        <!--  x-if -->
+        <template x-if="open">
+            <div class="bg-gray-50 p-2 mt-4">
+                Template based on a condition
+            </div>
+        </template>
     </div>
 </main>
 </body>
