@@ -95,6 +95,18 @@
         >
             Add Post
         </button>
+
+        <!--  x-ref -->
+        <div class="mt-4">
+            <div x-ref="text"></div>
+            <button
+                    @click="$refs.text.innerText = 'Hello'"
+                    class="bg-neutral-950 inline-flex h-12 items-center justify-center rounded-md px-6 font-medium text-neutral-50 shadow-lg shadow-neutral-500/20 transition active:scale-95"
+            >
+                Click
+            </button>
+        </div>
+
     </div>
 </main>
 </body>
