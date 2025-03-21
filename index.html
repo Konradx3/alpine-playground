@@ -119,8 +119,19 @@
             Replace text
         </button>
 
-        <!--  x-init -->
+        <!--  x-init and $watch -->
         <div x-init="$watch('posts', value => console.log(value))"></div>
+
+        <!--  $dispatch -->
+        <div @notify="alert('You have been notified')">
+            <button
+                    @click="$dispatch('notify')"
+                    class=" mt-4 bg-green-600 inline-flex h-12 items-center justify-center rounded-md px-6 font-medium text-neutral-50 shadow-lg shadow-neutral-500/20 transition active:scale-95"
+            >
+                Notify
+            </button>
+        </div>
+
     </div>
 </main>
 </body>
